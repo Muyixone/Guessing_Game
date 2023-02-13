@@ -1,0 +1,23 @@
+{
+  "name": "guessing_game",
+  "version": "1.0.0",
+  "description": "A guessing game involving more than two players.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muyixone/Guessing_Game.git"
+  },
+  "author": "Osamuyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muyixone/Guessing_Game/issues"
+  },
+  "homepage": "https://github.com/Muyixone/Guessing_Game#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.0"
+  }
+}
