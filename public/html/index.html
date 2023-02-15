@@ -76,15 +76,15 @@
           socket.emit('Chat_message', input.value);
           input.value = '';
         }
+      });
 
-        // Gets the message from the server and displays it to the from end
-        socket.on('Chat_message', (msg) => {
-          console.log(msg);
-          var item = document.createElement('li');
-          item.textContent = msg;
-          messages.appendChild(item);
-          windows.scrollTo(0, document.body.scrollHeight);
-        });
+      // Gets the message from the server and displays it to the from end
+      socket.on('Chat_message', (msg) => {
+        console.log(msg);
+        var item = document.createElement('li');
+        item.textContent = msg;
+        messages.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
       });
     </script>
   </body>
