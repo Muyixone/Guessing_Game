@@ -14,15 +14,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 // });
 
 io.on('connection', (socket) => {
+  // Gets a user connected to the server message
+  socket.on('User_connected', (msg) => {
+    //emits message to the client
+    socket.broadcast.emit('message', 'User connected');
+  });
+
   // Gets a message from the front-end/form
   socket.on('Chat_message', (message) => {
     // Sends a message from the server to the front end
-    // socket.broadcast.emit('Chat_message', message);
+
     io.emit('Chat_message', message);
   });
 
   socket.on('disconnect', () => {
-    console.log('User disconnected');
+    socket.broadcast.emit('message', 'User disconnected');
   });
 });
 
